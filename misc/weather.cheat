@@ -9,19 +9,3 @@ curl -s "wttr.in" \
 curl -s "wttr.in/<location>" \
    | grep -v "New feature" \
    | grep -v Follow
-
-
-
-% qr code
-
-# Create a QR code with some content
-echo <content> | curl -F-=\<- qrenco.de
-
-
-
-% json
-
-# convert JSON to YAML
-cat <json_file> | ruby -ryaml -rjson -e 'puts YAML.dump(JSON.load(ARGF))'
-
-$ json_file: find . -name '*.json'
