@@ -1,0 +1,118 @@
+% eopkg
+
+# Add a repository for installing packages (<repo>: name of repository to add, <indexuri>: address or repository)
+eopkg ar <repo> <indexuri>
+
+# Remove eopkg packages
+eopkg rmf [<package1> <package2> ... <packagen>]
+
+# Information about the package owner and release
+eopkg bl
+
+# Build an eopkg
+eopkg bi
+
+# Verify all installations
+eopkg check
+
+# Clean stale locks
+eopkg clean
+
+# Configure pending packages
+eopkg cp
+
+# Delete cached packages
+eopkg dc
+
+# Creates a delta package
+eopkg dt
+
+# Disable a repository
+eopkg dr [<repo1 <repo2> ... <repon>]
+
+# Build and install eopkg source packages from repository
+eopkg em <sourcename>
+
+# Enable a repository
+eopkg er [<repo1 <repo2> ... <repon>]
+
+# Fetch a package
+eopkg fc [<package1> <package2> ... <packagen>]
+
+# Display all avalible eopkg commands
+eopkg help
+
+# Display help for a specific command
+eopkg help <command>
+
+# View package transaction history
+eopkg hs
+
+# Index eopkg files in a given directory
+eopkg ix <directory>
+
+# Display package Information
+eopkg info [<package1> <package2> ... <packagen>]
+
+# Install an eopkg
+eopkg it [<package1> <package2> ... <packagen>]
+
+# List all available packages in the repositories
+eopkg la
+
+# List all available packages in a specific repository
+eopkg la [<repo1 <repo2> ... <repon>]
+
+# List available components
+eopkg lc
+
+# Print a list of all installed packages
+eopkg li
+
+# List newest packages in all repositories
+eopkg ln
+
+# List newest packages in specific repository
+eopkg ln [<repo1 <repo2> ... <repon>]
+
+# List pending packages
+eopkg lp
+
+# List repositories
+eopkg lr
+
+# List avalible sources
+eopkg ls
+
+# List packages that can be upgraded
+eopkg lu
+
+# Rebuild eopkg databases
+eopkg rdb
+
+# Remove eopkg packages
+eopkg rm [<package1> <package2> ... <packagen>]
+
+# Remove orphaned packages
+eopkg rmo
+
+# Remove repositories
+eopkg rr [<repo1 <repo2> ... <repon>]
+
+# Search for a package in repositories
+eopkg sr <query>
+
+# Search for the installed package which contains the specified file
+eopkg sf [<path1> <path2> ... <pathn>]
+
+# Update all repository databases
+eopkg ur
+
+# Update specific repository database
+eopkg ur [<repo1 <repo2> ... <repon>]
+
+# Update all installed eopkg packages
+eopkg up
+
+# Update a specific eopkg package
+eopkg up [<package1> <package2> ... <packagen>]
