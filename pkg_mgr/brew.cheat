@@ -36,6 +36,42 @@ brew edit <package>
 # edit cask
 brew cask edit <casks>
 
+# list all services installed by brew for the current user
+brew services list
+
+# for root, list all services installed by brew
+sudo brew services list
+
+# run the service formula without registering to launch at login
+brew services run <brewservice>
+
+# as root, run the service formula without registering to launch at login
+sudo brew services run <brewservice>
+
+# start the service formula immediately and register it to launch at login
+brew services start <brewservice>
+
+# as root, start the service formula immediately and register it to launch at login
+sudo brew services start <brewservice>
+
+# stop the service formula immediately and unregister it from launching at login
+brew services stop <brewservice>
+
+# as root, stop the service formula immediately and unregister it from launching at login
+sudo brew services stop <brewservice>
+
+# stop (if necessary) and start the service formula immediately and register it to launch at login
+brew services restart <brewservice>
+
+# as root, stop (if necessary) and start the service formula immediately and register it to launch at login
+sudo brew services restart <brewservice>
+
+# remove all unused services
+brew services cleanup
+
+# as root, remove all unused services
+sudo brew services cleanup
+
 # auto cleanup
 brew cleanup
 
@@ -58,3 +94,4 @@ $ package: brew search
 $ casks: brew search --casks
 $ installed: brew list
 $ caskinstalled: brew cask list
+$ brewservice: brew services list | awk '{if (NR>1){printf "%s\n", $1}}'
