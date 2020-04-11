@@ -3,6 +3,15 @@
 # Lock system
 pmset displaysleepnow
 
+# Eject volume
+diskutil eject '<eject_vol>'
+
+# Show disk info
+diskutil list
+
+# Show partition info
+diskutil info '<disk_dev>'
+
 # Show hidden files in Finder
 defaults write com.apple.finder AppleShowAllFiles -bool true; \
    killall Finder
@@ -23,3 +32,5 @@ defaults write com.apple.finder CreateDesktop -bool false; \
 osascript -e 'tell application "Finder" to set desktop picture to POSIX file "<image_path>"'
 
 $ image_path: find $HOME -maxdepth 3 -name "*.jpg" -o -name "*.jpeg" -o -name "*.png"
+$ disk_dev: find /dev -maxdepth 1 -name "disk*s*"
+$ eject_vol: find /Volumes ! -path /Volumes -maxdepth 1 -type d  -name "*"
