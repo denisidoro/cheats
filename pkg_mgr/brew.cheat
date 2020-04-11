@@ -18,6 +18,12 @@ brew install <package>
 # install a cask
 brew cask install <casks>
 
+# reinstall a package
+brew reinstall <package>
+
+# reinstall a cask
+brew reinstall <caskinstalled>
+
 # uninstall a package
 brew uninstall <installed>
 
@@ -29,6 +35,24 @@ brew edit <package>
 
 # edit cask
 brew cask edit <casks>
+
+# auto cleanup
+brew cleanup
+
+# link formula
+brew link <installed>
+
+# delete files that already exist in the prefix while linking
+brew link --overwrite <installed>
+
+# allow keg-only formulae to be linked
+brew link --force <installed>
+
+# health check
+brew doctor
+
+# fix permissions
+sudo chown -R $(whoami):admin /usr/local
 
 $ package: brew search
 $ casks: brew search --casks
