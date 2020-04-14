@@ -1,5 +1,11 @@
 % osx, mac os
 
+# Copy <file_or_dir> to <target_path>, and remove all target files and directories `@` attribute
+cp -RX <file_or_dir> <target_path>
+
+# Remove <file_or_dir>'s `@` attribute
+xattr -rc <file_or_dir>
+
 # Lock system
 pmset displaysleepnow
 
@@ -31,6 +37,7 @@ defaults write com.apple.finder CreateDesktop -bool false; \
 # Set wallpaper
 osascript -e 'tell application "Finder" to set desktop picture to POSIX file "<image_path>"'
 
+$ file_or_dir: ls
 $ image_path: find $HOME -maxdepth 3 -name "*.jpg" -o -name "*.jpeg" -o -name "*.png"
 $ disk_dev: find /dev -maxdepth 1 -name "disk*s*"
 $ eject_vol: find /Volumes ! -path /Volumes -maxdepth 1 -type d  -name "*"
