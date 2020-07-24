@@ -1,0 +1,81 @@
+% zypper
+
+# Install packages
+zypper install <package-name>
+
+# Install local rpm package
+zypper install <filepath-rpm>
+
+# Download package without installing
+zypper install --download-only <package-name>
+
+# Downgrade or install a package with a specific version
+zypper install --force <package-name>-<package-version>
+
+# Install a package and remove a package in one go
+zypper install <package-name-1> -<package-name-2>
+
+# Remove package
+zypper remove <package-name>
+
+# Automatically remove unneeded dependencies
+zypper remove --clean-deps <package-name>
+
+# Update packages
+zypper update
+
+# Only download the packages, do not install
+zypper update --download-only 
+
+# List available updates
+zypper list-updates
+
+# Update specific package
+zypper update <package-name>
+
+# Perform a distribution upgrade
+zypper dist-upgrade
+
+# Search packages
+zypper search <query>
+
+# Search in the file list of packages 
+zypper search --file-list <query>
+
+# list all packages depended on the package
+zypper search --requires <package-name>
+
+# List all packages providing the specified capability
+zypper what-provides <query>
+
+# Show full information for specified packages
+zypper info <package-name>
+
+# List dependencies of package
+zypper info --requires <package-name>
+
+# List what the current package provides
+zypper info --provides <package-name>
+
+# List all available packages
+zypper packages
+
+# List all installed packages
+zypper packages --installed-only
+
+# Clean up all local caches
+zypper clean
+
+# Clean both metadata and package caches
+zypper clean --all
+
+# Start a shell to enter multiple commands in one session
+zypper shell
+
+
+
+
+
+
+
+
