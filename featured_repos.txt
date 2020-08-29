@@ -1,4 +1,5 @@
 denisidoro/cheats
+denisidoro/navi-tldr-pages
 denisidoro/dotfiles
 mrVanDalo/navi-cheats
 chazeon/my-navi-cheats
