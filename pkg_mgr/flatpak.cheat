@@ -1,0 +1,41 @@
+% flatpak
+
+# Run an installed application
+flatpak run <installed_app_name>
+
+# Search for an application
+flatpak search <app_name>
+
+# Install an application from a remote source
+flatpak install <remote_name> <app_name>
+
+# Uninstall an application
+flatpak uninstall <installed_app_name>
+
+# List all installed applications and runtimes
+flatpak list
+
+# List all installed applications
+flatpak list --app
+
+# Add a remote source
+flatpak remote-add --if-not-exists <remote_name> <remote_url>
+
+# List all applications available in a remote source
+flatpak remote-ls <installed_remotes>
+
+# Show the commit log for a specific application
+flatpak remote-info --log <installed_remotes> <installed_app_name>
+
+# Update installed applications
+flatpak update
+
+# Show running applications
+flatpak ps
+
+# Kill a running application
+flatpak kill <running_app>
+
+$ installed_app_name: flatpak list --app | awk -F"\t" '{ print $2 }'
+$ installed_remotes: flatpak remote-list | awk '{ print $1 }'
+$ running_app: flatpak ps | awk '{ print $3 }'
