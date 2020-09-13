@@ -12,6 +12,21 @@ git init
 # Clone a git repository
 git clone -b <branch_name> <repository> <clone_directory>
 
+# Shallow clone with depth 1 with all branches and submodules
+git clone --depth=1 --no-single-branch --recurse-submodules <repository> <clone_directory>
+
+# Rebase upstream master into local/origin master (use if people don't clone your repository)
+git fetch <remote_name>
+git checkout master
+git rebase <remote_name>/master
+git push -f origin master
+
+# Merge upstream master into local/origin master (use if people clone your repository)
+git fetch <remote_name>
+git checkout master
+git merge <remote_name>/master
+git push -f origin master
+
 # View all available remote for a git repository
 git remote --verbose
 
