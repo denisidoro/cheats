@@ -19,12 +19,14 @@ git clone --depth=1 --no-single-branch --recurse-submodules <repository> <clone_
 git fetch <remote_name>
 git checkout master
 git rebase <remote_name>/master
+git fetch --unshallow origin
 git push -f origin master
 
 # Merge upstream master into local/origin master (use if people clone your repository)
 git fetch <remote_name>
 git checkout master
 git merge <remote_name>/master
+git fetch --unshallow origin
 git push -f origin master
 
 # View all available remote for a git repository
