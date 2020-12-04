@@ -122,7 +122,7 @@ git checkout -b <new_branch_name>
 # Remove commits from local repository (destroy changes)
 git reset --hard HEAD~<number_of_commits>
 
-# Remove commits from local repository (keep changes locally)
+# Remove commits from local repository (keep changes)
 git reset --soft HEAD~<number_of_commits>
 
 $ branch: git branch | awk '{print $NF}'
