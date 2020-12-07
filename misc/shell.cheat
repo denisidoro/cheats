@@ -65,7 +65,7 @@ ls -alt
 ls *.<txt>
 
 # List all files of type
-find . -name *.<txt> -print
+find . -name '*.<txt>' -print
 
 # Go back to previous directory
 cd -
