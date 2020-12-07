@@ -119,6 +119,12 @@ git commit --no-verify
 # Create new branch from current HEAD
 git checkout -b <new_branch_name>
 
+# Remove commits from local repository (destroy changes)
+git reset --hard HEAD~<number_of_commits>
+
+# Remove commits from local repository (keep changes)
+git reset --soft HEAD~<number_of_commits>
+
 $ branch: git branch | awk '{print $NF}'
 $ toplevel_directory: git rev-parse --show-toplevel
 $ unstaged_files: git status --untracked-files=no -s --porcelain | awk '{print $NF}' --- --multi true
