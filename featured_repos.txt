@@ -6,3 +6,4 @@ chazeon/my-navi-cheats
 caojianhua/MyCheat
 Kidman1670/cheats
 isene/cheats
+m42martin/navi-cheats
