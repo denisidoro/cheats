@@ -58,8 +58,11 @@ cd <toplevel_directory>; \
 # Stage all files in project
 git add -A
 
-# Saves the changes to a file in a commit
-git commit -m <message>
+# Create commit for staged files
+git commit -m "<commit_description>"
+
+# Create backdated commit for staged files
+git commit --date="<number_of_days_ago> days ago" -m "<commit_description>"
 
 # Pushes committed changes to remote repository
 git push -u <remote_name> <branch_name>
