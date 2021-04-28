@@ -1,0 +1,32 @@
+% xsv
+
+# count rows
+xsv count <filename>
+
+# sample random rows
+xsv sample <N> <filename>
+
+# display headers from .csv file
+xsv headers <filename>
+
+# display frequency table from .csv file
+xsv frequency <filename>
+
+# search for pattern in .csv file
+xsv search <pattern> <filename>
+
+# calculate stats from .csv file
+xsv stats <filename> --everything | xsv table
+
+# select columns from .csv file
+less <filename> | xsv select <columns>
+
+# sort file by columns
+less <filename> | xsv sort -s <columns>
+
+# unique values in a column
+awk -F ',' '{print $<column_number>}' <filename> | sort | uniq -c | sort -nr
+
+$ filename: ls -l | grep .csv | awk '{print $NF}' --- --prevent-extra --preview 'bat --style=numbers --color=always {} | head -500' --preview-window up:50% 
+$ columns: head -1 $filename | tr ',' '\n' --- --multi --map "echo $0 | tr  '[:space:]' ',' | sed 's/.$//' "
+
