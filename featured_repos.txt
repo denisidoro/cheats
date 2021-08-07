@@ -7,3 +7,4 @@ caojianhua/MyCheat
 Kidman1670/cheats
 isene/cheats
 m42martin/navi-cheats
+infosecstreams/cheat.sheets
