@@ -63,4 +63,4 @@ kubens -
 # Show the current namespace
 kubens -c
 
-$ namespaces: namespaces: kubens --- --headers 1 --column 3
+$ namespaces: kubens --- --headers 1 --column 3
