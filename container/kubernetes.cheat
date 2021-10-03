@@ -50,3 +50,17 @@ kubectl cordon <name>
 
 # Display resource (cpu/memory/storage) usage
 kubectl top <type>
+
+# List the namespaces in the current context
+kubens
+
+# Change the active namespace of current context
+kubens <namespaces>
+
+# Switch to the previous namespace in this context
+kubens -
+
+# Show the current namespace
+kubens -c
+
+$ namespaces: namespaces: kubens --- --headers 1 --column 3
