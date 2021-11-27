@@ -2,3 +2,15 @@
 
 # Start ssh agent
 eval "$(ssh-agent -s)"; ssh-add
+
+# Create a tunnel through a jump server using a specific key
+ssh -NnL <host>:<server> <jump_server> -i <key>
+
+
+# Create a tunnel through a jump server using a specific key pointing to a ssh server
+ssh -NnL <host>:2222:<server>:22 <jumpsrv> -i <key>
+
+# Create a tunnel through a jump server reacheable through the web browser using a specific key"
+sudo -E env "PATH=$PATH" ssh -NnL <host>:<server> <jumpsrv> -i <key>
+
+$ key = ls .
