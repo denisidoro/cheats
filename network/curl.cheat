@@ -27,10 +27,10 @@ curl <url> -d <bodykey>=<bodyvalue>
 # send a http request and see the request as well as the response
 curl -v <url>
 
-# send a http request wih a body from a file
+# send a http request with a body from a file
 curl -X <method> <url> --data-binary "@<file>"
 
-# send a http request wih a custom header
+# send a http request with a custom header
 curl -X <method> <url> -H "<headername>: <headervalue>"
 
 $ file: ls
