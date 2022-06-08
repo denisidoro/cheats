@@ -9,3 +9,4 @@ isene/cheats
 m42martin/navi-cheats
 infosecstreams/cheat.sheets
 prx2090/cheatsheets-for-navi
+papanito/cheats
