@@ -128,7 +128,41 @@ git reset --hard HEAD~<number_of_commits>
 # Remove commits from local repository (keep changes)
 git reset --soft HEAD~<number_of_commits>
 
+# Show only file names changed in commit
+git show --name-only <commit>
+
+# Show only files names changed in commit with summary of removed added lines
+git show --name-only --stat <commit>
+
+# Log commits between two tags, commits, revisions
+git log <commit>...<commit>
+
+# Diff with N lines of context
+git diff -U<N> <commit>
+
+# Show commits which modified code matching pattern
+git log -S <pattern> --pretty=oneline | awk '{print $1}' | xargs git show
+
+# Show commits which modified a certain function (only works if HEAD modified file)
+git log -L :<function>:<file>
+
+# Show commits which modified a certain set of lines (only works if HEAD modified file)
+git log -L <begin>,<end>:<file>
+
+# Remote add through SSH tunnel
+git remote add <remote> ssh://git@localhost:<port>/<repo_name>.git
+
+# Add only modified files, ignoring new files
+git ls-files --modified | xargs git add
+
+# Create tar of branch or tag,
+git archive <branch> --format tar -o <output_file>
+
+# Ignore changes in a file privately
+git update-index --skip-worktree <file>
+
 $ branch: git branch | awk '{print $NF}'
+$ commit: git log --pretty=oneline
 $ toplevel_directory: git rev-parse --show-toplevel
-$ unstaged_files: git status --untracked-files=no -s --porcelain | awk '{print $NF}' --- --multi true
-$ changed_files: git status --untracked-files=all -s --porcelain | awk '{print $NF}' --- --multi true
+$ unstaged_files: git status --untracked-files=no -s --porcelain | awk '{print $NF}' --- --multi
+$ changed_files: git status --untracked-files=all -s --porcelain | awk '{print $NF}' --- --multi
