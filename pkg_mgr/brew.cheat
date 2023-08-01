@@ -10,31 +10,31 @@ brew upgrade
 brew info <package>
 
 # get info for a cask
-brew cask info <casks>
+brew info --cask <cask>
 
 # install a package
 brew install <package>
 
 # install a cask
-brew cask install <casks>
+brew install --cask <cask>
 
 # reinstall a package
 brew reinstall <package>
 
 # reinstall a cask
-brew reinstall <caskinstalled>
+brew reinstall --cask <cask>
 
 # uninstall a package
 brew uninstall <installed>
 
 # uninstall a cask
-brew cask uninstall <caskinstalled>
+brew uninstall --cask <caskinstalled>
 
 # edit package
 brew edit <package>
 
 # edit cask
-brew cask edit <casks>
+brew edit --cask <cask>
 
 # list all services installed by brew for the current user
 brew services list
@@ -93,5 +93,5 @@ sudo chown -R $(whoami):admin /usr/local
 $ package: brew search
 $ casks: brew search --casks
 $ installed: brew list
-$ caskinstalled: brew cask list
+$ caskinstalled: brew list --cask
 $ brewservice: brew services list | awk '{if (NR>1){printf "%s\n", $1}}'
