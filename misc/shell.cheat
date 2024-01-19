@@ -16,7 +16,7 @@ sudo nano /etc/motd
 # Run a script as background process
 <process> &
 
-#List all running processes
+# List all running processes
 ps -A
 
 # Kill a running process
